@@ -1,231 +1,38 @@
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Shopee Clone
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
- </head>
- <body class="bg-gray-100">
-  <!-- Header -->
-  <header class="bg-red-600 text-white">
-   <div class="container mx-auto flex justify-between items-center py-2 px-4">
-    <div class="flex items-center space-x-2 text-xs">
-     <a class="text-white" href="#">
-      Seller Centre
-     </a>
-     <a class="text-white" href="#">
-      Mulai Berjualan
-     </a>
-     <a class="text-white" href="#">
-      Download
-     </a>
-     <a class="text-white" href="#">
-      Ikuti kami di
-      <i class="fab fa-facebook">
-      </i>
-      <i class="fab fa-instagram">
-      </i>
-     </a>
-    </div>
-    <div class="flex items-center space-x-2 text-xs">
-     <a class="text-white" href="#">
-      Notifikasi
-     </a>
-     <a class="text-white" href="#">
-      Bantuan
-     </a>
-     <a class="text-white" href="#">
-      Bahasa Indonesia
-     </a>
-     <a class="text-white" href="#">
-      Daftar
-     </a>
-     <a class="text-white" href="#">
-      Log In
-     </a>
-    </div>
-   </div>
-  </header>
-  <!-- Main Navigation -->
-  <nav class="bg-red-500">
-   <div class="container mx-auto flex justify-between items-center py-4 px-4">
-    <div class="flex items-center space-x-2">
-     <img alt="Shopee Logo" class="h-8" height="50" src="https://storage.googleapis.com/a1aa/image/CnO6ZYNyEt5JE9SmiuewBJ2X5GdWiEQAT1fzAIqyqqkIOtqTA.jpg" width="50"/>
-     <span class="text-white text-xl font-bold">
-      Shopee
-     </span>
-    </div>
-    <div class="flex items-center space-x-2">
-     <input class="px-2 py-1 rounded-l-md" placeholder="Cari di Shopee" type="text"/>
-     <button class="bg-white text-red-500 px-2 py-1 rounded-r-md">
-      <i class="fas fa-search">
-      </i>
-     </button>
-    </div>
-    <div class="flex items-center space-x-2">
-     <a class="text-white" href="#">
-      <i class="fas fa-shopping-cart">
-      </i>
-     </a>
-    </div>
-   </div>
-  </nav>
-  <!-- Promo Banner -->
-  <section class="bg-orange-500 text-white py-4">
-   <div class="container mx-auto flex flex-col space-y-2 px-4">
-    <div class="flex items-center space-x-2 text-sm">
-     <span class="text-lg">
-      Daftar &amp; Dapat Voucher Gratis
-     </span>
-    </div>
-    <div class="flex flex-wrap items-center space-x-2 text-xs">
-     <span>
-      HP Gratis 0 Rupiah
-     </span>
-     <span>
-      Labubu Macaron Secret
-     </span>
-     <span>
-      Kredit HP Tanpa DP Cicilan 12 Bulan OPPO
-     </span>
-     <span>
-      HP iPhone 10 Ribu
-     </span>
-     <span>
-      Cardigan Rajut Korean Style Anak
-     </span>
-    </div>
-   </div>
-  </section>
-  <!-- Main Content -->
-  <main class="container mx-auto py-4 px-4">
-   <div class="grid grid-cols-1 gap-4">
-    <div class="col-span-1">
-     <div class="bg-orange-500 text-white p-4 rounded-md">
-      <h2 class="text-xl font-bold">
-       Cari yang murah? Cari yang ada jempolnya!
-      </h2>
-      <div class="flex flex-col space-y-2 mt-4">
-       <div class="bg-white text-orange-500 px-4 py-2 rounded-md flex items-center space-x-2">
-        <i class="fas fa-thumbs-up">
-        </i>
-        <span>
-         Termurah di Shopee
-        </span>
-       </div>
-       <div class="bg-yellow-500 text-white px-4 py-2 rounded-md">
-        <span>
-         SETIAP PK. 18.00 WIB
-        </span>
-        <div class="flex items-center space-x-2">
-         <span>
-          DISKON S/D
-         </span>
-         <span class="text-3xl font-bold">
-          60%
-         </span>
-         <span>
-          VOUCHER S/D
-         </span>
-         <span class="text-3xl font-bold">
-          100RB
-         </span>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="space-y-4">
-     <div class="bg-red-500 text-white p-4 rounded-md">
-      <h2 class="text-lg font-bold">
-       Shopee Pilih Lokal
-      </h2>
-      <p class="text-sm">
-       Semua Produk Lokal Makin Murah 15%
-      </p>
-     </div>
-     <div class="bg-green-500 text-white p-4 rounded-md">
-      <h2 class="text-lg font-bold">
-       Shopee Barokah
-      </h2>
-      <p class="text-sm">
-       Destinasi Gaya Hidup Islami
-      </p>
-      <p class="text-sm">
-       Diskon S/D 80% Mulai Dari 20RB
-      </p>
-     </div>
-    </div>
-   </div>
-  </main>
-  <!-- Categories -->
-  <section class="bg-white py-4">
-   <div class="container mx-auto flex flex-wrap justify-around items-center">
-    <div class="text-center w-1/3 mb-4">
-     <img alt="Shopee Pilih Lokal" class="mx-auto" height="50" src="https://storage.googleapis.com/a1aa/image/fwJxl4ThTcyFfkCvSv0egIUxllTVqQqvTtRWesUn4trw30qOB.jpg" width="50"/>
-     <span class="text-xs">
-      Shopee Pilih Lokal
-     </span>
-    </div>
-    <div class="text-center w-1/3 mb-4">
-     <img alt="Shopee Mall" class="mx-auto" height="50" src="https://storage.googleapis.com/a1aa/image/2T7nB0oDXOJrNF54l4o348ueiXZ3fnARS0xOUfppl3gIcaVnA.jpg" width="50"/>
-     <span class="text-xs">
-      Shopee Mall
-     </span>
-    </div>
-    <div class="text-center w-1/3 mb-4">
-     <img alt="Pulsa, Tagihan, dan Tiket" class="mx-auto" height="50" src="https://storage.googleapis.com/a1aa/image/xJFemNOfwVoDL05xMOxB1SS490BMcbdTFHfAJXSfoHkG40qOB.jpg" width="50"/>
-     <span class="text-xs">
-      Pulsa, Tagihan, dan Tiket
-     </span>
-    </div>
-    <div class="text-center w-1/3 mb-4">
-     <img alt="inFashion" class="mx-auto" height="50" src="https://storage.googleapis.com/a1aa/image/DVCgl7daDCqqGNcoOu0gStsHDAB47I8qJbMVCA2xcC4fmW1JA.jpg" width="50"/>
-     <span class="text-xs">
-      inFashion
-     </span>
-    </div>
-    <div class="text-center w-1/3 mb-4">
-     <img alt="Shopee Supermarket" class="mx-auto" height="50" src="https://storage.googleapis.com/a1aa/image/hj8AjZzThhpDM1tj15lfdUjRPTb7JElxcSdWCuzPfplAOtqTA.jpg" width="50"/>
-     <span class="text-xs">
-      Shopee Supermarket
-     </span>
-    </div>
-    <div class="text-center w-1/3 mb-4">
-     <img alt="Bayar Di Tempat" class="mx-auto" height="50" src="https://storage.googleapis.com/a1aa/image/4zBmNAVBj0bNM1i2dJ5vprAnoBPqn5SDlrCA5NQ8Q5ygTr6E.jpg" width="50"/>
-     <span class="text-xs">
-      Bayar Di Tempat
-     </span>
-    </div>
-    <div class="text-center w-1/3 mb-4">
-     <img alt="Termurah di Shopee" class="mx-auto" height="50" src="https://storage.googleapis.com/a1aa/image/xAejj8Ein2yrVa6YXKJUU7GiXuqUOIefjvN0Iz4dsGV6baVnA.jpg" width="50"/>
-     <span class="text-xs">
-      Termurah di Shopee
-     </span>
-    </div>
-    <div class="text-center w-1/3 mb-4">
-     <img alt="Gratis Ongkir dan Voucher" class="mx-auto" height="50" src="https://storage.googleapis.com/a1aa/image/D2b39aDlGpbjIZhI8f6tZgWLq2DEgK9WXoneIlEgeyCMcaVnA.jpg" width="50"/>
-     <span class="text-xs">
-      Gratis Ongkir dan Voucher
-     </span>
-    </div>
-    <div class="text-center w-1/3 mb-4">
-     <img alt="Shopee Barokah" class="mx-auto" height="50" src="https://storage.googleapis.com/a1aa/image/8RmroyfUc0U1BC2g5KuZuSIvjcDeC3PgQQnDYgjghHG6NtqTA.jpg" width="50"/>
-     <span class="text-xs">
-      Shopee Barokah
-     </span>
-    </div>
-    <div class="text-center w-1/3 mb-4">
-     <img alt="Semua Promo" class="mx-auto" height="50" src="https://storage.googleapis.com/a1aa/image/7p171eHFevqVtkZfLXTROpJ7eEi5MHfOcVjKFsKFvK6fhTr6E.jpg" width="50"/>
-     <span class="text-xs">
-      Semua Promo
-     </span>
-    </div>
-   </div>
-  </section>
- </body>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teks Berjalan dengan Animasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Warna latar belakang */
+            overflow: hidden; /* Menghilangkan scrollbar */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .marquee {
+            position: absolute;
+            white-space: nowrap; /* Mencegah teks terputus */
+            font-weight: bold; /* Teks tebal */
+            color: black; /* Warna teks hitam */
+            font-size: 24px; /* Ukuran font */
+            animation: scroll 10s linear infinite; /* Animasi */
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%); /* Mulai dari luar kanan */
+            }
+            100% {
+                transform: translateX(-100%); /* Berhenti di luar kiri */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee">NURUT AJA INI MONYET 😂 </div>
+</body>
 </html>
