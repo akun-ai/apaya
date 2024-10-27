@@ -1,11 +1,66 @@
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
-    <title>Bear Drawing</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hati Berjalan</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0e68c;
+            overflow: hidden;
+        }
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: move 6s ease-in-out infinite;
+        }
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -50px;
+            left: 0;
+        }
+        .heart:after {
+            left: 50px;
+            top: 0;
+        }
+        @keyframes move {
+            0% {
+                transform: translateX(-100%) rotate(-45deg);
+            }
+            25% {
+                transform: translateX(50vw) rotate(-45deg);
+            }
+            50% {
+                transform: translateX(100vw) rotate(-45deg);
+            }
+            75% {
+                transform: translateX(50vw) rotate(-45deg);
+            }
+            100% {
+                transform: translateX(-100%) rotate(-45deg);
+            }
+        }
+    </style>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-white">
-    <div class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
-        <img class="w-full h-auto" src="https://storage.googleapis.com/a1aa/image/8ueMDshQlGzcMi0enlD40GrybesI8JwVzfvVmPwzXb6951qOB.jpg" alt="A cute cartoon bear sitting with a happy expression, drawn in black and white line art style. The bear has round ears, a small nose, and big eyes, with its paws visible at the bottom.">
-    </div>
+<body>
+
+<div class="heart"></div>
+
 </body>
 </html>
