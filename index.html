@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dino Joget 3D</title>
-    <style>
-        body { margin: 0; }
-        canvas { display: block; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Dino Joget</title>
+  
+  <!-- Load Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+  <!-- Optional: You might also need the GLTFLoader if you're loading a GLTF model -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/examples/js/loaders/GLTFLoader.js"></script>
+  
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script>
-        // Scene, Camera, Renderer
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
 
-        // Dino (simple cube for demonstration)
-        const dinoGeometry = new THREE.BoxGeometry(1, 1, 1);
-        const dinoMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        const dino = new THREE.Mesh(dinoGeometry, dinoMaterial);
-        scene.add(dino);
+  <script>
+    // Initialize the scene, camera, and renderer
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
 
-        // Position the camera
-        camera.position.z = 5;
+    // Create a dino model (example: use GLTFLoader if you have a 3D model in GLTF format)
+    const loader = new THREE.GLTFLoader();
+    loader.load('models/dino.gltf', function (gltf) {
+      const dino = gltf.scene;
+      scene.add(dino);
 
-        // Animation function
-        function animate() {
-            requestAnimationFrame(animate);
+      // Add animation to dino (for example, rotation)
+      function animateDino() {
+        requestAnimationFrame(animateDino);
+        
+        dino.rotation.y += 0.01;  // Dino will rotate slowly
 
-            // Simple dance animation
-            dino.rotation.x += 0.01;
-            dino.rotation.y += 0.01;
+        renderer.render(scene, camera);
+      }
 
-            // Move up and down
-            dino.position.y = Math.sin(Date.now() * 0.001) * 0.5;
+      animateDino();
+    });
 
-            renderer.render(scene, camera);
-        }
+    // Set up the camera position
+    camera.position.z = 5;
+  </script>
 
-        animate();
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    </script>
 </body>
 </html>
