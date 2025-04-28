@@ -1,47 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Dino Joget</title>
-  
-  <!-- Load Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
-  <!-- Optional: You might also need the GLTFLoader if you're loading a GLTF model -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/examples/js/loaders/GLTFLoader.js"></script>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <script>
-    // Initialize the scene, camera, and renderer
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-
-    // Create a dino model (example: use GLTFLoader if you have a 3D model in GLTF format)
-    const loader = new THREE.GLTFLoader();
-    loader.load('models/dino.gltf', function (gltf) {
-      const dino = gltf.scene;
-      scene.add(dino);
-
-      // Add animation to dino (for example, rotation)
-      function animateDino() {
-        requestAnimationFrame(animateDino);
-        
-        dino.rotation.y += 0.01;  // Dino will rotate slowly
-
-        renderer.render(scene, camera);
-      }
-
-      animateDino();
-    });
-
-    // Set up the camera position
-    camera.position.z = 5;
-  </script>
-
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('0')">0</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
