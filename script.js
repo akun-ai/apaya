@@ -7,7 +7,7 @@ function calculate() {
     const display = document.getElementById('display');
     const expression = display.value;
     
-    // This will replace the result of any mathematical operation with "I love you"
+    // This will replace the result of any mathematical operation with "mabar epep bang"
     if (expression.match(/[0-9]+[+\-*/][0-9]+/)) {
         display.value = 'I love you';
     } else {
