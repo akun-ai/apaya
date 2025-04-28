@@ -1,23 +1,55 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Joget 3D</title>
     <style>
-        body {
-        video {
-     
+        body { margin: 0; }
+        canvas { display: block; }
     </style>
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Scene, Camera, Renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
 
-    <h1></h1>
+        // Dino (simple cube for demonstration)
+        const dinoGeometry = new THREE.BoxGeometry(1, 1, 1);
+        const dinoMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const dino = new THREE.Mesh(dinoGeometry, dinoMaterial);
+        scene.add(dino);
 
-    <video width="" height="" controls autoplay>
-        <source src="https://vt.tiktok.com/ZSh1HQK4o/" type="video/mp4">
-        
-    </video>
+        // Position the camera
+        camera.position.z = 5;
 
+        // Animation function
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Simple dance animation
+            dino.rotation.x += 0.01;
+            dino.rotation.y += 0.01;
+
+            // Move up and down
+            dino.position.y = Math.sin(Date.now() * 0.001) * 0.5;
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
 </body>
 </html>
