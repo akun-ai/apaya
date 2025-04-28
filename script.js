@@ -9,7 +9,7 @@ function calculate() {
     
     // This will replace the result of any mathematical operation with "mabar epep bang"
     if (expression.match(/[0-9]+[+\-*/][0-9]+/)) {
-        display.value = 'I love you';
+        display.value = 'mabar epep bang';
     } else {
         try {
             display.value = eval(expression);
